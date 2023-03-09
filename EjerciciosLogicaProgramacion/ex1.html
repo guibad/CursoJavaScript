@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cuentaCaracteres(cadena) {
+            return cadena.length;
+        }
+
+        function recortaTexto(cadena, caracteres) {
+            return cadena.substr(0, caracteres);
+        }
+
+        function arrayTexto(cadena, caracter) {
+            let arrayCadena = cadena.split(caracter);
+            return arrayCadena;
+        }
+
+        function repiteTexto(cadena, num) {
+            let texto = '';
+            for (i = 0; i < num; i++) texto = texto + cadena+" ";
+            return texto;
+        }
+
+        console.log(cuentaCaracteres("Hola Mundo"));
+        console.log(recortaTexto("Hola Mundo", 4));
+        console.log(arrayTexto("hola que tal", " "));
+        console.log(repiteTexto("Hola Mundo", 3));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
