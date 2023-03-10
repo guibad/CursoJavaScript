@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe.miFuncion(100, 2) devolverá 4 base 10.
+        function convertirBinarioDecimal(num, base) {
+            if (base === 2) {
+                return parseInt(num, 2) + " base 10";
+            } else if (base === 10) {
+                return num.toString(2)
+            } else {
+                throw new Error('La base debe ser 2 o 10');
+            }
+        }
+
+        console.log(convertirBinarioDecimal(100, 2));
+
+        // 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe.miFuncion(1000, 20) devolverá 800.
+        function aplicaDescuento(num, descuento) {
+            let precioFinal = num - ((num / 100) * descuento);
+            return precioFinal;
+        }
+
+        console.log(aplicaDescuento(1000, 20));
+
+        // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe.miFuncion(new Date(1984, 4, 23)) devolverá 35 años(en 2020).
+        function calcularFecha(fecha) {
+            const hoy = new Date();
+            let años = hoy.getFullYear() - fecha.getFullYear();
+            const mesActual = hoy.getMonth() + 1;
+            const diaActual = hoy.getDate();
+            const mesFecha = fecha.getMonth() + 1;
+            const diaFecha = fecha.getDate();
+
+            if (mesActual < mesFecha || (mesActual === mesFecha && diaActual < diaFecha)) {
+                años--;
+            }
+
+            return "Han pasado " + años + " años.";
+        }
+
+        console.log(calcularFecha(new Date(1984, 4, 23)));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
